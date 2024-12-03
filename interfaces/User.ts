@@ -1,4 +1,4 @@
-export default interface Match {
+export default interface User {
     id: string;
     name: string;
     age: number;

@@ -1,7 +1,10 @@
 import Filter from "@/interfaces/Filter";
-import Match from "@/interfaces/Match";
-import { useState } from "react";
-import { Button, FlatList, Switch, Text, TextInput, View } from "react-native";
+import User from "@/interfaces/User";
+import { useEffect, useState } from "react";
+import { Button, Switch, Text, TextInput, View } from "react-native";
+import Request from "../requests/Request";
+import MatchCollection from "./MatchCollection";
+import matchesData from "../db.json";
 
 export default function MatchingPage() {
   const [data, setData] = useState<Filter>({
@@ -9,7 +12,12 @@ export default function MatchingPage() {
     game: undefined,
     playAtHome: false,
   });
-  const [matches, setMatches] = useState<Match[]>();
+  const [matches, setMatches] = useState<User[]>();
+  const [viewOptions, setViewOptions] = useState<boolean>(false);
+
+  useEffect(() => {
+    getMatches();
+  }, []);
 
   const handleChange = <T extends string | boolean | number>(
     name: string,
@@ -23,24 +31,17 @@ export default function MatchingPage() {
 
   const getMatches = async () => {
     console.log("Filter on: ", data);
-    try {
-      const response = await fetch(
-        `http://localhost:3000/matches?age=${data.age}&game=${data.game}&playAtHome=${data.playAtHome}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          // body: JSON.stringify(data),
-        }
-      );
 
-      const responseData = await response.json();
-      console.log("MATCHES: ", responseData);
-      setMatches(responseData);
-    } catch (error) {
-      console.error("Error fetching data: ", error);
-    }
+    // const responseData = await Request(
+    //   // `matches?age=${data.age}&game=${data.game}&playAtHome=${data.playAtHome}`,
+    //   "matches",
+    //   "GET",
+    //   null
+    // );
+    // setMatches(responseData);
+
+    setMatches(matchesData.matches);
+    setViewOptions(false);
   };
 
   return (
@@ -51,45 +52,53 @@ export default function MatchingPage() {
         alignItems: "center",
       }}
     >
-      <TextInput
-        placeholder="Enter age"
-        value={data.age?.toString() || ""}
-        keyboardType="numeric"
-        onChangeText={(value) => handleChange("age", value)}
-      />
+      {viewOptions ? (
+        <>
+          <TextInput
+            placeholder="Enter age"
+            value={data.age?.toString() || ""}
+            keyboardType="numeric"
+            onChangeText={(value) => handleChange("age", value)}
+          />
 
-      <TextInput
-        placeholder="Enter game"
-        value={data.game}
-        onChangeText={(value) => handleChange("game", value)}
-      />
+          <TextInput
+            placeholder="Enter game"
+            value={data.game}
+            onChangeText={(value) => handleChange("game", value)}
+          />
 
-      <View>
-        <Text>Play at home</Text>
-        <Switch
-          value={data.playAtHome}
-          onValueChange={(value) => handleChange("playAtHome", value)}
-        />
-      </View>
-
-      <Button
-        title="Get matches"
-        onPress={() => {
-          getMatches();
-        }}
-      />
-
-      <FlatList
-        data={matches}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
           <View>
-            <Text>{item.name}</Text>
-            <Text>Age: {item.age}</Text>
-            <Text>Plays at home: {item.playAtHome ? "Y" : "N"}</Text>
+            <Text>Play at home</Text>
+            <Switch
+              value={data.playAtHome}
+              onValueChange={(value) => handleChange("playAtHome", value)}
+            />
           </View>
-        )}
-      />
+
+          <Button
+            title="Get matches"
+            onPress={() => {
+              getMatches();
+            }}
+          />
+
+          <Button
+            title="Hide"
+            onPress={() => {
+              setViewOptions(false);
+            }}
+          />
+        </>
+      ) : (
+        <Button
+          title="Options"
+          onPress={() => {
+            setViewOptions(true);
+          }}
+        />
+      )}
+
+      <MatchCollection matches={matches || []} />
     </View>
   );
 }
