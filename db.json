@@ -1,0 +1,74 @@
+{
+  "matches": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "age": 25,
+      "game": "Kingdom of Darkness",
+      "playAtHome": true
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "age": 30,
+      "game": "Fia med knuff",
+      "playAtHome": false
+    },
+    {
+      "id": "3",
+      "name": "Charlie",
+      "age": 22,
+      "game": "Kingdom of Darkness",
+      "playAtHome": true
+    },
+    {
+      "id": "4",
+      "name": "Diana",
+      "age": 28,
+      "game": "Schack",
+      "playAtHome": false
+    },
+    {
+      "id": "5",
+      "name": "Eve",
+      "age": 20,
+      "game": "Schack",
+      "playAtHome": true
+    },
+    {
+      "id": "6",
+      "name": "Frank",
+      "age": 35,
+      "game": "Kingdom of Darkness",
+      "playAtHome": false
+    },
+    {
+      "id": "7",
+      "name": "Grace",
+      "age": 27,
+      "game": "DND",
+      "playAtHome": true
+    },
+    {
+      "id": "8",
+      "name": "Hank",
+      "age": 32,
+      "game": "Fia med knuff",
+      "playAtHome": false
+    },
+    {
+      "id": "9",
+      "name": "Ivy",
+      "age": 29,
+      "game": "DND",
+      "playAtHome": true
+    },
+    {
+      "id": "10",
+      "name": "Jack",
+      "age": 24,
+      "game": "Schack",
+      "playAtHome": false
+    }
+  ]
+}
