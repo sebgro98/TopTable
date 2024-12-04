@@ -22,10 +22,10 @@ export default function MatchingPage() {
 
   useEffect(() => {
     getMatches();
-  }, []);
+  }, [userMatch]);
 
   const getMatches = async () => {
-    console.log("Filter on: ", filterData);
+    // console.log("Filter on: ", filterData);
 
     // const url = userMatch ? "user/filter" : "group/filter";
     // const responseData = await Request(
@@ -35,7 +35,11 @@ export default function MatchingPage() {
     // );
     // setMatches(responseData);
 
-    setMatches(userMatch ? (matchesData.users as User[]) : (matchesData.groups as Group[]));
+    setMatches(
+      userMatch
+        ? (matchesData.users as User[])
+        : (matchesData.groups as Group[])
+    );
     setViewFilterOptions(false);
   };
 
@@ -43,7 +47,6 @@ export default function MatchingPage() {
   const userOptions = () => {
     if (!userMatch) {
       setUserMatch(true);
-      getMatches();
     }
   };
 
@@ -51,7 +54,6 @@ export default function MatchingPage() {
   const groupOptions = () => {
     if (userMatch) {
       setUserMatch(false);
-      getMatches();
     }
   };
 
@@ -63,25 +65,12 @@ export default function MatchingPage() {
         alignItems: "center",
       }}
     >
-      <View>
-        <Button
-          title="Users"
-          onPress={() => {
-            userOptions();
-          }}
-        />
-
-        <Button
-          title="Groups"
-          onPress={() => {
-            groupOptions();
-          }}
-        />
-      </View>
-
       {viewFilterOptions ? (
         <>
-          <FilterOptions filterData={filterData} setFilterData={setFilterData} />
+          <FilterOptions
+            filterData={filterData}
+            setFilterData={setFilterData}
+          />
 
           <Button
             title="Get matches"
@@ -91,15 +80,38 @@ export default function MatchingPage() {
           />
         </>
       ) : (
-        <Button
-          title="Filters"
-          onPress={() => {
-            setViewFilterOptions(true);
-          }}
-        />
-      )}
+        <>
+          <Button
+            title="Filters"
+            onPress={() => {
+              setViewFilterOptions(true);
+            }}
+          />
 
-      <MatchCollection matches={matches || []} />
+          <View
+            style={{
+              flexDirection: "row",
+              margin: 20,
+            }}
+          >
+            <Button
+              title="Users"
+              onPress={() => {
+                userOptions();
+              }}
+            />
+
+            <Button
+              title="Groups"
+              onPress={() => {
+                groupOptions();
+              }}
+            />
+          </View>
+
+          <MatchCollection matches={matches || []} />
+        </>
+      )}
     </View>
   );
 }

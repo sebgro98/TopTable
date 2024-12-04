@@ -1,11 +1,13 @@
 import User from "@/interfaces/User";
 import { Button, View } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MatchFrame from "./MatchFrame";
 import Group from "@/interfaces/Group";
 
 export default function MatchCollection({ matches }: { matches: User[] | Group[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  //Set currentIndex to 0 when switching between users and groups?
 
   const handleNext = () => {
     if (currentIndex < matches.length - 1) {
@@ -38,12 +40,12 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
             }}
           >
             <Button
-              title="<"
+              title="<Previous"
               onPress={handlePrevious}
               disabled={currentIndex === 0}
             />
             <Button
-              title=">"
+              title="Next>"
               onPress={handleNext}
               disabled={currentIndex === matches.length - 1}
             />
