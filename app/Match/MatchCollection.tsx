@@ -38,12 +38,12 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
             }}
           >
             <Button
-              title="Previous"
+              title="<"
               onPress={handlePrevious}
               disabled={currentIndex === 0}
             />
             <Button
-              title="Next"
+              title=">"
               onPress={handleNext}
               disabled={currentIndex === matches.length - 1}
             />

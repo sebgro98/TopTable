@@ -1,73 +1,464 @@
 {
-  "matches": [
+  "users": [
     {
       "id": "1",
+      "type": "u",
       "name": "Alice",
       "age": 25,
-      "game": "Kingdom of Darkness",
+      "bio": "Gamer and board game enthusiast.",
+      "games": [
+        {
+          "title": "Kingdom of Darkness",
+          "noOfPlayers": 4,
+          "estTime": "2 hours"
+        },
+        {
+          "title": "Monopoly",
+          "noOfPlayers": 6,
+          "estTime": "1 hour"
+        }
+      ],
+      "playAtHome": true,
+      "playInPublic": false,
+      "friendsList": []
+    },
+    {
+      "id": "2",
+      "type": "u",
+      "name": "Bob",
+      "age": 30,
+      "bio": "Strategy gamer and socializer.",
+      "games": [
+        {
+          "title": "Fia med knuff",
+          "noOfPlayers": 4,
+          "estTime": "1 hour"
+        }
+      ],
+      "playAtHome": false,
+      "playInPublic": true,
+      "friendsList": []
+    },
+    {
+      "id": "3",
+      "type": "u",
+      "name": "Charlie",
+      "age": 22,
+      "bio": "Roleplaying games are my thing!",
+      "games": [
+        {
+          "title": "Dungeons & Dragons",
+          "noOfPlayers": 6,
+          "estTime": "3 hours"
+        }
+      ],
+      "playAtHome": true,
+      "playInPublic": false,
+      "friendsList": []
+    },
+    {
+      "id": "4",
+      "type": "u",
+      "name": "Diana",
+      "age": 28,
+      "bio": "Chess enthusiast and casual gamer.",
+      "games": [
+        {
+          "title": "Chess",
+          "noOfPlayers": 2,
+          "estTime": "30 minutes"
+        }
+      ],
+      "playAtHome": false,
+      "playInPublic": true,
+      "friendsList": []
+    },
+    {
+      "id": "5",
+      "type": "u",
+      "name": "Eve",
+      "age": 20,
+      "bio": "Loves party games and board games.",
+      "games": [
+        {
+          "title": "Uno",
+          "noOfPlayers": 6,
+          "estTime": "30 minutes"
+        }
+      ],
+      "playAtHome": true,
+      "playInPublic": true,
+      "friendsList": []
+    },
+    {
+      "id": "6",
+      "type": "u",
+      "name": "Frank",
+      "age": 35,
+      "bio": "Casual gamer with a competitive side.",
+      "games": [
+        {
+          "title": "Catan",
+          "noOfPlayers": 4,
+          "estTime": "1 hour"
+        }
+      ],
+      "playAtHome": false,
+      "playInPublic": false,
+      "friendsList": []
+    },
+    {
+      "id": "7",
+      "type": "u",
+      "name": "Grace",
+      "age": 27,
+      "bio": "Dungeons & Dragons master.",
+      "games": [
+        {
+          "title": "Dungeons & Dragons",
+          "noOfPlayers": 6,
+          "estTime": "3 hours"
+        }
+      ],
+      "playAtHome": true,
+      "playInPublic": false,
+      "friendsList": []
+    },
+    {
+      "id": "8",
+      "type": "u",
+      "name": "Hank",
+      "age": 32,
+      "bio": "Loves strategy games and group activities.",
+      "games": [
+        {
+          "title": "Risk",
+          "noOfPlayers": 6,
+          "estTime": "2 hours"
+        }
+      ],
+      "playAtHome": false,
+      "playInPublic": true,
+      "friendsList": []
+    },
+    {
+      "id": "9",
+      "type": "u",
+      "name": "Ivy",
+      "age": 29,
+      "bio": "Board games for life.",
+      "games": [
+        {
+          "title": "Clue",
+          "noOfPlayers": 6,
+          "estTime": "1 hour"
+        }
+      ],
+      "playAtHome": true,
+      "playInPublic": false,
+      "friendsList": []
+    },
+    {
+      "id": "10",
+      "type": "u",
+      "name": "Jack",
+      "age": 24,
+      "bio": "Competitive and fun-loving gamer.",
+      "games": [
+        {
+          "title": "Codenames",
+          "noOfPlayers": 8,
+          "estTime": "1 hour"
+        }
+      ],
+      "playAtHome": false,
+      "playInPublic": true,
+      "friendsList": []
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "type": "g",
+      "name": "Board Game Enthusiasts",
+      "bio": "A group for those who love strategic board games.",
+      "members": [
+        {
+          "id": "1",
+          "type": "u",
+          "name": "Alice",
+          "age": 25,
+          "bio": "Gamer and board game enthusiast.",
+          "games": [
+            {
+              "title": "Kingdom of Darkness",
+              "noOfPlayers": 4,
+              "estTime": "2 hours"
+            }
+          ],
+          "playAtHome": true,
+          "playInPublic": false,
+          "friendsList": []
+        },
+        {
+          "id": "2",
+          "type": "u",
+          "name": "Bob",
+          "age": 30,
+          "bio": "Strategy gamer and socializer.",
+          "games": [
+            {
+              "title": "Fia med knuff",
+              "noOfPlayers": 4,
+              "estTime": "1 hour"
+            }
+          ],
+          "playAtHome": false,
+          "playInPublic": true,
+          "friendsList": []
+        }
+      ],
+      "admin": {
+        "id": "1",
+        "type": "u",
+        "name": "Alice",
+        "age": 25,
+        "bio": "Gamer and board game enthusiast.",
+        "games": [
+          {
+            "title": "Kingdom of Darkness",
+            "noOfPlayers": 4,
+            "estTime": "2 hours"
+          }
+        ],
+        "playAtHome": true,
+        "playInPublic": false,
+        "friendsList": []
+      },
+      "games": [
+        {
+          "title": "Catan",
+          "noOfPlayers": 4,
+          "estTime": "1 hour"
+        }
+      ],
       "playAtHome": true
     },
     {
       "id": "2",
-      "name": "Bob",
-      "age": 30,
-      "game": "Fia med knuff",
-      "playAtHome": false
+      "type": "g",
+      "name": "Dungeons & Dragons Group",
+      "bio": "A group for D&D fans.",
+      "members": [
+        {
+          "id": "3",
+          "type": "u",
+          "name": "Charlie",
+          "age": 22,
+          "bio": "Roleplaying games are my thing!",
+          "games": [
+            {
+              "title": "Dungeons & Dragons",
+              "noOfPlayers": 6,
+              "estTime": "3 hours"
+            }
+          ],
+          "playAtHome": true,
+          "playInPublic": false,
+          "friendsList": []
+        },
+        {
+          "id": "7",
+          "type": "u",
+          "name": "Grace",
+          "age": 27,
+          "bio": "Dungeons & Dragons master.",
+          "games": [
+            {
+              "title": "Dungeons & Dragons",
+              "noOfPlayers": 6,
+              "estTime": "3 hours"
+            }
+          ],
+          "playAtHome": true,
+          "playInPublic": false,
+          "friendsList": []
+        }
+      ],
+      "admin": {
+        "id": "3",
+        "type": "u",
+        "name": "Charlie",
+        "age": 22,
+        "bio": "Roleplaying games are my thing!",
+        "games": [
+          {
+            "title": "Dungeons & Dragons",
+            "noOfPlayers": 6,
+            "estTime": "3 hours"
+          }
+        ],
+        "playAtHome": true,
+        "playInPublic": false,
+        "friendsList": []
+      },
+      "games": [
+        {
+          "title": "Dungeons & Dragons",
+          "noOfPlayers": 6,
+          "estTime": "3 hours"
+        }
+      ],
+      "playAtHome": true
     },
     {
       "id": "3",
-      "name": "Charlie",
-      "age": 22,
-      "game": "Kingdom of Darkness",
-      "playAtHome": true
+      "type": "g",
+      "name": "Risk Masters",
+      "bio": "For fans of Risk.",
+      "members": [
+        {
+          "id": "8",
+          "type": "u",
+          "name": "Hank",
+          "age": 32,
+          "bio": "Loves strategy games and group activities.",
+          "games": [
+            {
+              "title": "Risk",
+              "noOfPlayers": 6,
+              "estTime": "2 hours"
+            }
+          ],
+          "playAtHome": false,
+          "playInPublic": true,
+          "friendsList": []
+        }
+      ],
+      "admin": {
+        "id": "8",
+        "type": "u",
+        "name": "Hank",
+        "age": 32,
+        "bio": "Loves strategy games and group activities.",
+        "games": [
+          {
+            "title": "Risk",
+            "noOfPlayers": 6,
+            "estTime": "2 hours"
+          }
+        ],
+        "playAtHome": false,
+        "playInPublic": true,
+        "friendsList": []
+      },
+      "games": [
+        {
+          "title": "Risk",
+          "noOfPlayers": 6,
+          "estTime": "2 hours"
+        }
+      ],
+      "playAtHome": false
     },
     {
       "id": "4",
-      "name": "Diana",
-      "age": 28,
-      "game": "Schack",
-      "playAtHome": false
+      "type": "g",
+      "name": "Uno Players",
+      "bio": "A group for Uno lovers.",
+      "members": [
+        {
+          "id": "5",
+          "type": "u",
+          "name": "Eve",
+          "age": 20,
+          "bio": "Loves party games and board games.",
+          "games": [
+            {
+              "title": "Uno",
+              "noOfPlayers": 6,
+              "estTime": "30 minutes"
+            }
+          ],
+          "playAtHome": true,
+          "playInPublic": true,
+          "friendsList": []
+        }
+      ],
+      "admin": {
+        "id": "5",
+        "type": "u",
+        "name": "Eve",
+        "age": 20,
+        "bio": "Loves party games and board games.",
+        "games": [
+          {
+            "title": "Uno",
+            "noOfPlayers": 6,
+            "estTime": "30 minutes"
+          }
+        ],
+        "playAtHome": true,
+        "playInPublic": true,
+        "friendsList": []
+      },
+      "games": [
+        {
+          "title": "Uno",
+          "noOfPlayers": 6,
+          "estTime": "30 minutes"
+        }
+      ],
+      "playAtHome": true
     },
     {
       "id": "5",
-      "name": "Eve",
-      "age": 20,
-      "game": "Schack",
-      "playAtHome": true
-    },
-    {
-      "id": "6",
-      "name": "Frank",
-      "age": 35,
-      "game": "Kingdom of Darkness",
-      "playAtHome": false
-    },
-    {
-      "id": "7",
-      "name": "Grace",
-      "age": 27,
-      "game": "DND",
-      "playAtHome": true
-    },
-    {
-      "id": "8",
-      "name": "Hank",
-      "age": 32,
-      "game": "Fia med knuff",
-      "playAtHome": false
-    },
-    {
-      "id": "9",
-      "name": "Ivy",
-      "age": 29,
-      "game": "DND",
-      "playAtHome": true
-    },
-    {
-      "id": "10",
-      "name": "Jack",
-      "age": 24,
-      "game": "Schack",
+      "type": "g",
+      "name": "Chess Club",
+      "bio": "A group for Chess lovers.",
+      "members": [
+        {
+          "id": "4",
+          "type": "u",
+          "name": "Diana",
+          "age": 28,
+          "bio": "Chess enthusiast and casual gamer.",
+          "games": [
+            {
+              "title": "Chess",
+              "noOfPlayers": 2,
+              "estTime": "30 minutes"
+            }
+          ],
+          "playAtHome": false,
+          "playInPublic": true,
+          "friendsList": []
+        }
+      ],
+      "admin": {
+        "id": "4",
+        "type": "u",
+        "name": "Diana",
+        "age": 28,
+        "bio": "Chess enthusiast and casual gamer.",
+        "games": [
+          {
+            "title": "Chess",
+            "noOfPlayers": 2,
+            "estTime": "30 minutes"
+          }
+        ],
+        "playAtHome": false,
+        "playInPublic": true,
+        "friendsList": []
+      },
+      "games": [
+        {
+          "title": "Chess",
+          "noOfPlayers": 2,
+          "estTime": "30 minutes"
+        }
+      ],
       "playAtHome": false
     }
   ]

@@ -1,5 +1,5 @@
 //This component can be used both as a card when swiping and as the view for a group's profile
-//(When a group clicks to edit their profile, it can be the same as page as when creating new group)
+//(When a group admin clicks to edit the group profile, it can be the same as page as when creating new group)
 
 import Group from "@/interfaces/Group";
 import { Text, View } from "react-native";

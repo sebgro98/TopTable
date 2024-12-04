@@ -1,5 +1,7 @@
 export default interface Filter {
-    age?: string;
-    game?: string;
+    ageMin?: number;
+    ageMax?: number;
+    gameTitle?: string; //May be replaced by Game object
     playAtHome?: boolean;
+    playInPublic?: boolean;
   }
