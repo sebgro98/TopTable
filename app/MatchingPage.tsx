@@ -5,6 +5,7 @@ import { Button, Switch, Text, TextInput, View } from "react-native";
 import Request from "../requests/Request";
 import MatchCollection from "./MatchCollection";
 import matchesData from "../db.json";
+import Group from "@/interfaces/Group";
 
 export default function MatchingPage() {
   const [data, setData] = useState<Filter>({
@@ -12,7 +13,7 @@ export default function MatchingPage() {
     game: undefined,
     playAtHome: false,
   });
-  const [matches, setMatches] = useState<User[]>();
+  const [matches, setMatches] = useState<User[] | Group[]>();
   const [viewOptions, setViewOptions] = useState<boolean>(false);
 
   useEffect(() => {
@@ -33,10 +34,9 @@ export default function MatchingPage() {
     console.log("Filter on: ", data);
 
     // const responseData = await Request(
-    //   // `matches?age=${data.age}&game=${data.game}&playAtHome=${data.playAtHome}`,
     //   "matches",
     //   "GET",
-    //   null
+    //   data
     // );
     // setMatches(responseData);
 

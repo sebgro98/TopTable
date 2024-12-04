@@ -2,8 +2,9 @@ import User from "@/interfaces/User";
 import { Button, View } from "react-native";
 import { useState } from "react";
 import MatchFrame from "./MatchFrame";
+import Group from "@/interfaces/Group";
 
-export default function MatchCollection({ matches }: { matches: User[] }) {
+export default function MatchCollection({ matches }: { matches: User[] | Group[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -28,7 +29,7 @@ export default function MatchCollection({ matches }: { matches: User[] }) {
     >
       {matches.length > 0 && (
         <>
-          <MatchFrame user={matches[currentIndex]} />
+          <MatchFrame match={matches[currentIndex]} />
 
           <View
             style={{

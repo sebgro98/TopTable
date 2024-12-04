@@ -1,10 +1,12 @@
 import User from "@/interfaces/User";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import UserProfile from "./UserProfile";
+import Group from "@/interfaces/Group";
+import GroupProfile from "./GroupProfile";
 
-export default function MatchFrame({ user }: { user: User }) {
+export default function MatchFrame({ match }: { match: User | Group }) {
   const addFriend = () => {
-    console.log("Adding user/group to wish list: ", user.name);
+    console.log("Adding user/group to wish list: ", match.name);
   };
 
   return (
@@ -18,12 +20,17 @@ export default function MatchFrame({ user }: { user: User }) {
         height: 450,
       }}
     >
-      <UserProfile user={user}/>
+      {match.type === "u" ? (
+        <UserProfile user={match} />
+      ) : (
+        <GroupProfile group={match} />
+      )}
 
       <View
-      style={{
-        alignItems: "center",
-      }}>
+        style={{
+          alignItems: "center",
+        }}
+      >
         <TouchableOpacity style={styles.button} onPress={() => addFriend()}>
           <Text style={styles.buttonText}>Add</Text>
         </TouchableOpacity>
