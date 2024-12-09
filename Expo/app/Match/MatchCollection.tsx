@@ -25,7 +25,7 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
+        // justifyContent: "center",
         alignItems: "center",
       }}
     >
