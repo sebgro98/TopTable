@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
+import User from "@/interfaces/User";
+import Group from "@/interfaces/Group";
+import { StyleSheet, View } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import MatchFrame from "./MatchFrame";
 import Animated, {
@@ -11,7 +13,7 @@ import Animated, {
 
 const SWIPE_THRESHOLD = 0.25 * 300; // Adjust to fit your card width
 
-export default function MatchCollection({ matches }: { matches: any[] }) {
+export default function MatchCollection({ matches }: { matches: User[] | Group[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const translateX = useSharedValue(0);
