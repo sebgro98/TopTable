@@ -1,8 +1,8 @@
 import User from "@/interfaces/User";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import UserProfile from "../UserProfile";
+import UserProfile from "../Profile/UserProfile";
 import Group from "@/interfaces/Group";
-import GroupProfile from "../GroupProfile";
+import GroupProfile from "../Profile/GroupProfile";
 
 export default function MatchFrame({ match }: { match: User | Group }) {
   const addToWishlist = () => {
@@ -23,10 +23,16 @@ export default function MatchFrame({ match }: { match: User | Group }) {
         )}
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, styles.rejectButton]} onPress={rejectMatch}>
+        <TouchableOpacity
+          style={[styles.button, styles.rejectButton]}
+          onPress={rejectMatch}
+        >
           <Text style={styles.buttonText}>Reject</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.addButton]} onPress={addToWishlist}>
+        <TouchableOpacity
+          style={[styles.button, styles.addButton]}
+          onPress={addToWishlist}
+        >
           <Text style={styles.buttonText}>Add</Text>
         </TouchableOpacity>
       </View>
@@ -39,7 +45,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   profileContainer: {
-   
     borderRadius: 10,
     padding: 15,
     margin: 10,
@@ -75,4 +80,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-

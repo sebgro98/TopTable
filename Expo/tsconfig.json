@@ -6,5 +6,5 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "app/TestFirestore.tsx", "firebaseConfig.js", "firebaseModel.js"]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "firebaseConfig.js", "firebaseModel.js"]
 }
