@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   }
 
   if (!user) {
-    router.replace("/login");
+    router.replace("/Auth/AuthScreen");
     return null;
   }
 
