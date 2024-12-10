@@ -1,0 +1,182 @@
+[
+    {
+      "title": "Catan",
+      "genre": "Strategy",
+      "amount_of_players": "3-4",
+      "game_time": "60-120 minutes"
+    },
+    {
+      "title": "Pandemic",
+      "genre": "Cooperative",
+      "amount_of_players": "2-4",
+      "game_time": "45-60 minutes"
+    },
+    {
+      "title": "Carcassonne",
+      "genre": "Tile Placement",
+      "amount_of_players": "2-5",
+      "game_time": "30-45 minutes"
+    },
+    {
+      "title": "Ticket to Ride",
+      "genre": "Family",
+      "amount_of_players": "2-5",
+      "game_time": "30-60 minutes"
+    },
+    {
+      "title": "Gloomhaven",
+      "genre": "Dungeon Crawl",
+      "amount_of_players": "1-4",
+      "game_time": "60-120 minutes"
+    },
+    {
+      "title": "7 Wonders",
+      "genre": "Drafting",
+      "amount_of_players": "2-7",
+      "game_time": "30-45 minutes"
+    },
+    {
+      "title": "Dominion",
+      "genre": "Deck Building",
+      "amount_of_players": "2-4",
+      "game_time": "30 minutes"
+    },
+    {
+      "title": "Scythe",
+      "genre": "Strategy",
+      "amount_of_players": "1-5",
+      "game_time": "90-115 minutes"
+    },
+    {
+      "title": "Azul",
+      "genre": "Abstract",
+      "amount_of_players": "2-4",
+      "game_time": "30-45 minutes"
+    },
+    {
+      "title": "Terraforming Mars",
+      "genre": "Strategy",
+      "amount_of_players": "1-5",
+      "game_time": "120-180 minutes"
+    },
+    {
+      "title": "Wingspan",
+      "genre": "Card Game",
+      "amount_of_players": "1-5",
+      "game_time": "40-70 minutes"
+    },
+    {
+      "title": "Betrayal at House on the Hill",
+      "genre": "Thematic",
+      "amount_of_players": "3-6",
+      "game_time": "60 minutes"
+    },
+    {
+      "title": "Chess",
+      "genre": "Abstract",
+      "amount_of_players": "2",
+      "game_time": "Varies"
+    },
+    {
+      "title": "Risk",
+      "genre": "Strategy",
+      "amount_of_players": "2-6",
+      "game_time": "120-180 minutes"
+    },
+    {
+      "title": "Codenames",
+      "genre": "Party Game",
+      "amount_of_players": "2-8",
+      "game_time": "15-30 minutes"
+    },
+    {
+      "title": "Splendor",
+      "genre": "Economic",
+      "amount_of_players": "2-4",
+      "game_time": "30 minutes"
+    },
+    {
+      "title": "Twilight Struggle",
+      "genre": "Historical",
+      "amount_of_players": "2",
+      "game_time": "120-180 minutes"
+    },
+    {
+      "title": "The Crew: Quest for Planet Nine",
+      "genre": "Cooperative",
+      "amount_of_players": "2-5",
+      "game_time": "20 minutes"
+    },
+    {
+      "title": "Puerto Rico",
+      "genre": "Economic",
+      "amount_of_players": "2-5",
+      "game_time": "90-150 minutes"
+    },
+    {
+      "title": "Clank!",
+      "genre": "Deck Building",
+      "amount_of_players": "2-4",
+      "game_time": "30-60 minutes"
+    },
+    {
+      "title": "Everdell",
+      "genre": "Worker Placement",
+      "amount_of_players": "1-4",
+      "game_time": "40-80 minutes"
+    },
+    {
+      "title": "Dixit",
+      "genre": "Party Game",
+      "amount_of_players": "3-6",
+      "game_time": "30 minutes"
+    },
+    {
+      "title": "Patchwork",
+      "genre": "Abstract",
+      "amount_of_players": "2",
+      "game_time": "20-30 minutes"
+    },
+    {
+      "title": "Root",
+      "genre": "Strategy",
+      "amount_of_players": "2-4",
+      "game_time": "60-90 minutes"
+    },
+    {
+      "title": "Love Letter",
+      "genre": "Card Game",
+      "amount_of_players": "2-4",
+      "game_time": "20 minutes"
+    },
+    {
+      "title": "Arkham Horror: The Card Game",
+      "genre": "Cooperative",
+      "amount_of_players": "1-2",
+      "game_time": "60-120 minutes"
+    },
+    {
+      "title": "King of Tokyo",
+      "genre": "Dice Game",
+      "amount_of_players": "2-6",
+      "game_time": "30 minutes"
+    },
+    {
+      "title": "Tapestry",
+      "genre": "Civilization",
+      "amount_of_players": "1-5",
+      "game_time": "90-120 minutes"
+    },
+    {
+      "title": "Agricola",
+      "genre": "Worker Placement",
+      "amount_of_players": "1-5",
+      "game_time": "90-120 minutes"
+    },
+    {
+      "title": "Lost Ruins of Arnak",
+      "genre": "Deck Building",
+      "amount_of_players": "1-4",
+      "game_time": "30-120 minutes"
+    }
+  ]
