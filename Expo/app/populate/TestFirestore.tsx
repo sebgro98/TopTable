@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebaseModel";
+import { db } from "../../firebaseModel";
 import { View, Text } from "react-native";
 import games from "./games.json";
 

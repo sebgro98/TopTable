@@ -11,19 +11,20 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-const SWIPE_THRESHOLD = 0.25 * 300; // Adjust to fit your card width
+const SWIPE_THRESHOLD = 0.25 * 300;
 
-export default function MatchCollection({ matches }: { matches: User[] | Group[] }) {
+export default function MatchCollection({
+  matches,
+}: {
+  matches: User[] | Group[];
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
   const handleSwipeComplete = (direction: "left" | "right") => {
-    const newIndex =
-      direction === "left"
-        ? currentIndex + 1
-        : currentIndex - 1;
+    const newIndex = direction === "left" ? currentIndex + 1 : currentIndex - 1;
 
     if (newIndex >= 0 && newIndex < matches.length) {
       setCurrentIndex(newIndex);
@@ -31,14 +32,6 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
 
     translateX.value = withTiming(0, { duration: 300 });
     translateY.value = withTiming(0, { duration: 300 });
-  };
-
-  const addToWishlist = () => {
-    console.log("Adding user/group to wishlist: ", matches[currentIndex].name);
-  };
-
-  const rejectMatch = () => {
-    console.log("Rejecting user/group: ", matches[currentIndex].name);
   };
 
   const gestureHandler = Gesture.Pan()
@@ -60,7 +53,7 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
     transform: [
       { translateX: translateX.value },
       { translateY: translateY.value },
-      { rotate: `${(translateX.value / 300) * 15}deg` }, // Adjust rotation scale
+      { rotate: `${(translateX.value / 300) * 15}deg` },
     ],
   }));
 
@@ -73,8 +66,7 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
               <MatchFrame match={matches[currentIndex]} />
             </Animated.View>
           </GestureDetector>
-          <View style={styles.buttonContainer}>
-          </View>
+          <View style={styles.buttonContainer}></View>
         </>
       )}
     </View>
