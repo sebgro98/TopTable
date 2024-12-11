@@ -3,7 +3,8 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { auth } from "./firebaseModel";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { auth, db } from "./firebaseModel";
 
 const signUp = async (email, password) => {
   const userCredential = await createUserWithEmailAndPassword(
@@ -27,4 +28,13 @@ const logOut = async () => {
   await signOut(auth);
 };
 
-export { signUp, logIn, logOut };
+const checkUserExists = async (uid) => {
+  const userDoc = await getDoc(doc(db, "users", uid));
+  return userDoc.exists();
+};
+
+const saveUserProfile = async (uid, profile) => {
+  await setDoc(doc(db, "users", uid), profile);
+};
+
+export { signUp, logIn, logOut, checkUserExists, saveUserProfile };

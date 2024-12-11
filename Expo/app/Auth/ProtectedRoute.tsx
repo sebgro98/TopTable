@@ -1,11 +1,21 @@
-import React from "react";
-import { useAuth } from "../../AuthProvider";
+import React, { useEffect } from "react";
+import { useAuth } from "../../AuthContext";
 import { useRouter } from "expo-router";
 import { View, ActivityIndicator } from "react-native";
 
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+export default function ProtectedRoute({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { user, loading } = useAuth();
   const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.replace("/Auth/AuthScreen");
+    }
+  }, [loading, user, router]);
 
   if (loading) {
     return (
@@ -16,11 +26,8 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   }
 
   if (!user) {
-    router.replace("/Auth/AuthScreen");
     return null;
   }
 
   return <>{children}</>;
-};
-
-export default ProtectedRoute;
+}
