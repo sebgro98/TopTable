@@ -6,11 +6,11 @@ import GroupProfile from "../Profile/GroupProfile";
 
 export default function MatchFrame({ match }: { match: User | Group }) {
   const addToWishlist = () => {
-    console.log("Adding user/group to wishlist: ", match.name);
+    console.log("Adding user/group to wishlist: ", match.username);
   };
 
   const rejectMatch = () => {
-    console.log("Rejecting user/group: ", match.name);
+    console.log("Rejecting user/group: ", match.username);
   };
 
   return (

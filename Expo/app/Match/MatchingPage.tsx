@@ -9,6 +9,8 @@ import Group from "@/interfaces/Group";
 import FilterOptions from "./FilterOptions";
 import { stylesActive, stylesDormant } from "@/styles/matchSwitchBtn";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { fetchAllUsers } from "../../firebaseFunctions";
+import { auth } from "../../firebaseModel";
 
 export default function MatchingPage() {
   const [matches, setMatches] = useState<User[] | Group[]>();
@@ -26,24 +28,45 @@ export default function MatchingPage() {
     getMatches();
   }, [userMatch]);
 
-  const getMatches = async () => {
-    // console.log("Filter on: ", filterData);
+const getMatches = async () => {
+  try {
+    
+    const currentUser = auth.currentUser;
+    const currentUserId = currentUser?.uid;
 
-    // const url = userMatch ? "user/filter" : "group/filter";
-    // const responseData = await Request(
-    //   url,
-    //   "GET",
-    //   filterData
-    // );
-    // setMatches(responseData);
+    // update this when groups are implemented
+    const [users] = await Promise.all([
+      fetchAllUsers(),
+      //fetchAllGroups(),
+    ]);
 
-    setMatches(
-      userMatch
-        ? (matchesData.users as User[])
-        : (matchesData.groups as Group[])
+    const groups = matchesData.groups as Group[];
+    
+    // Filter users: exclude the logged-in user
+    const filteredUsers: User[] = users.filter(
+      (user) => user.id !== currentUserId
     );
+
+    // Filter groups: exclude groups where the user is a member or admin
+    const filteredGroups: Group[] = groups.filter(
+      (group) =>
+        group.admin.id !== currentUserId && // Exclude groups where the user is an admin
+        !group.members.some((member) => member.id === currentUserId) // Exclude groups where the user is a member
+    );
+
+    
+    if (userMatch) {
+      setMatches(filteredUsers as User[]);
+    } else {
+      setMatches(filteredGroups as Group[]);
+    }
+
     setViewFilterOptions(false);
-  };
+  } catch (error) {
+    console.error("Error fetching matches:", error);
+  }
+};
+
 
   //Fetch user matches
   const userOptions = () => {

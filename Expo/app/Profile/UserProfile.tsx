@@ -7,7 +7,7 @@ import { Text, View } from "react-native";
 export default function UserProfile({ user }: { user: User }) {
   return (
     <View>
-      <Text>Name: {user.name}</Text>
+      <Text>Name: {user.username}</Text>
       <Text>Age: {user.age}</Text>
       {/* <Text>Games: {user.games}</Text> */}
       <Text>Plays at home: {user.playAtHome ? "Y" : "N"}</Text>

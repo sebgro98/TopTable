@@ -16,10 +16,15 @@ export default function CompleteProfileScreen() {
       return;
     }
     try {
-      
       await saveUserProfile(user.uid, {
         username,
         age: parseInt(age, 10),
+        type: "u",
+        bio: "", // Empty string for now
+        games: [], // Empty array for now
+        playAtHome: false, // Default to false
+        playInPublic: false, // Default to false
+        friendsList: [], // Empty array for now
       });
 
       Alert.alert("Success", "Your profile has been saved.");

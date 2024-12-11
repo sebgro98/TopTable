@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "IYG4oXllsmQVd6ZIqo6AHFTeraG3",
       "type": "u",
-      "name": "Alice",
+      "username": "Alice",
       "age": 25,
       "bio": "Gamer and board game enthusiast.",
       "games": [
@@ -25,7 +25,7 @@
     {
       "id": "2",
       "type": "u",
-      "name": "Bob",
+      "username": "Bob",
       "age": 30,
       "bio": "Strategy gamer and socializer.",
       "games": [
@@ -42,7 +42,7 @@
     {
       "id": "3",
       "type": "u",
-      "name": "Charlie",
+      "username": "Charlie",
       "age": 22,
       "bio": "Roleplaying games are my thing!",
       "games": [
@@ -59,7 +59,7 @@
     {
       "id": "4",
       "type": "u",
-      "name": "Diana",
+      "username": "Diana",
       "age": 28,
       "bio": "Chess enthusiast and casual gamer.",
       "games": [
@@ -76,7 +76,7 @@
     {
       "id": "5",
       "type": "u",
-      "name": "Eve",
+      "username": "Eve",
       "age": 20,
       "bio": "Loves party games and board games.",
       "games": [
@@ -93,7 +93,7 @@
     {
       "id": "6",
       "type": "u",
-      "name": "Frank",
+      "username": "Frank",
       "age": 35,
       "bio": "Casual gamer with a competitive side.",
       "games": [
@@ -110,7 +110,7 @@
     {
       "id": "7",
       "type": "u",
-      "name": "Grace",
+      "username": "Grace",
       "age": 27,
       "bio": "Dungeons & Dragons master.",
       "games": [
@@ -127,7 +127,7 @@
     {
       "id": "8",
       "type": "u",
-      "name": "Hank",
+      "username": "Hank",
       "age": 32,
       "bio": "Loves strategy games and group activities.",
       "games": [
@@ -144,7 +144,7 @@
     {
       "id": "9",
       "type": "u",
-      "name": "Ivy",
+      "username": "Ivy",
       "age": 29,
       "bio": "Board games for life.",
       "games": [
@@ -161,12 +161,12 @@
     {
       "id": "10",
       "type": "u",
-      "name": "Jack",
+      "username": "Jack",
       "age": 24,
       "bio": "Competitive and fun-loving gamer.",
       "games": [
         {
-          "title": "Codenames",
+          "title": "Codes",
           "noOfPlayers": 8,
           "estTime": "1 hour"
         }
@@ -180,13 +180,13 @@
     {
       "id": "1",
       "type": "g",
-      "name": "Board Game Enthusiasts",
+      "username": "Board Game Enthusiasts",
       "bio": "A group for those who love strategic board games.",
       "members": [
         {
-          "id": "1",
+          "id": "IYG4oXllsmQVd6ZIqo6AHFTeraG3",
           "type": "u",
-          "name": "Alice",
+          "username": "Alice",
           "age": 25,
           "bio": "Gamer and board game enthusiast.",
           "games": [
@@ -203,7 +203,7 @@
         {
           "id": "2",
           "type": "u",
-          "name": "Bob",
+          "username": "Bob",
           "age": 30,
           "bio": "Strategy gamer and socializer.",
           "games": [
@@ -219,9 +219,9 @@
         }
       ],
       "admin": {
-        "id": "1",
+        "id": "IYG4oXllsmQVd6ZIqo6AHFTeraG3",
         "type": "u",
-        "name": "Alice",
+        "username": "Alice",
         "age": 25,
         "bio": "Gamer and board game enthusiast.",
         "games": [
@@ -247,13 +247,13 @@
     {
       "id": "2",
       "type": "g",
-      "name": "Dungeons & Dragons Group",
+      "username": "Dungeons & Dragons Group",
       "bio": "A group for D&D fans.",
       "members": [
         {
           "id": "3",
           "type": "u",
-          "name": "Charlie",
+          "username": "Charlie",
           "age": 22,
           "bio": "Roleplaying games are my thing!",
           "games": [
@@ -270,7 +270,7 @@
         {
           "id": "7",
           "type": "u",
-          "name": "Grace",
+          "username": "Grace",
           "age": 27,
           "bio": "Dungeons & Dragons master.",
           "games": [
@@ -288,7 +288,7 @@
       "admin": {
         "id": "3",
         "type": "u",
-        "name": "Charlie",
+        "username": "Charlie",
         "age": 22,
         "bio": "Roleplaying games are my thing!",
         "games": [
@@ -314,13 +314,13 @@
     {
       "id": "3",
       "type": "g",
-      "name": "Risk Masters",
+      "username": "Risk Masters",
       "bio": "For fans of Risk.",
       "members": [
         {
           "id": "8",
           "type": "u",
-          "name": "Hank",
+          "username": "Hank",
           "age": 32,
           "bio": "Loves strategy games and group activities.",
           "games": [
@@ -338,7 +338,7 @@
       "admin": {
         "id": "8",
         "type": "u",
-        "name": "Hank",
+        "username": "Hank",
         "age": 32,
         "bio": "Loves strategy games and group activities.",
         "games": [
@@ -364,13 +364,13 @@
     {
       "id": "4",
       "type": "g",
-      "name": "Uno Players",
+      "username": "Uno Players",
       "bio": "A group for Uno lovers.",
       "members": [
         {
           "id": "5",
           "type": "u",
-          "name": "Eve",
+          "username": "Eve",
           "age": 20,
           "bio": "Loves party games and board games.",
           "games": [
@@ -388,7 +388,7 @@
       "admin": {
         "id": "5",
         "type": "u",
-        "name": "Eve",
+        "username": "Eve",
         "age": 20,
         "bio": "Loves party games and board games.",
         "games": [
@@ -414,13 +414,13 @@
     {
       "id": "5",
       "type": "g",
-      "name": "Chess Club",
+      "username": "Chess Club",
       "bio": "A group for Chess lovers.",
       "members": [
         {
           "id": "4",
           "type": "u",
-          "name": "Diana",
+          "username": "Diana",
           "age": 28,
           "bio": "Chess enthusiast and casual gamer.",
           "games": [
@@ -438,7 +438,7 @@
       "admin": {
         "id": "4",
         "type": "u",
-        "name": "Diana",
+        "username": "Diana",
         "age": 28,
         "bio": "Chess enthusiast and casual gamer.",
         "games": [
