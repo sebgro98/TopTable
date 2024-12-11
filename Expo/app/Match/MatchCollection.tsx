@@ -41,14 +41,6 @@ export default function MatchCollection({
     translateY.value = withTiming(0, { duration: 300 });
   };
 
-  const addToWishlist = () => {
-    console.log("Adding user/group to wishlist: ", matches[currentIndex].name);
-  };
-
-  const rejectMatch = () => {
-    console.log("Rejecting user/group: ", matches[currentIndex].name);
-  };
-
   const gestureHandler = Gesture.Pan()
     .onUpdate((event) => {
       translateX.value = event.translationX;
