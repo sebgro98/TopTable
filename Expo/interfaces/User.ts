@@ -3,7 +3,7 @@ import Group from "./Group";
 
 export default interface User {
     id: string;
-    type: "u"; //Discriminator for generics use in MatchFrame.tsx
+    type: "u"; 
     name: string;
     age: number;
     bio: string;

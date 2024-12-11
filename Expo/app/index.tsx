@@ -1,14 +1,16 @@
 import { Text, View } from "react-native";
 import { Link } from "expo-router";
-import TestFirestore from "./TestFirestore";
+
 export default function Index() {
   return (
-  
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home Screen</Text>
-      <Link href="./Match/MatchingPage">
-        <Text style={{ color: "blue" }}>Go to Matching Page</Text>
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20 }}>
+        Welcome to TopTable
+      </Text>
+      <Link href="/Auth/AuthScreen" style={{ marginVertical: 10 }}>
+        <Text style={{ color: "blue", fontSize: 18 }}>Go to Login Screen</Text>
       </Link>
+      
     </View>
   );
 }
