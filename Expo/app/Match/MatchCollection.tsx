@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import User from "@/interfaces/User";
 import Group from "@/interfaces/Group";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import MatchFrame from "./MatchFrame";
 import Animated, {
@@ -20,6 +20,12 @@ export default function MatchCollection({
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [matches]); //When switching between users and groups
+
+  let validIndex = Math.min(currentIndex, matches.length - 1);
+
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
@@ -28,6 +34,7 @@ export default function MatchCollection({
 
     if (newIndex >= 0 && newIndex < matches.length) {
       setCurrentIndex(newIndex);
+      validIndex = newIndex;
     }
 
     translateX.value = withTiming(0, { duration: 300 });
@@ -63,7 +70,7 @@ export default function MatchCollection({
         <>
           <GestureDetector gesture={gestureHandler}>
             <Animated.View style={animatedStyle}>
-              <MatchFrame match={matches[currentIndex]} />
+              <MatchFrame match={matches[validIndex]} />
             </Animated.View>
           </GestureDetector>
           <View style={styles.buttonContainer}></View>
