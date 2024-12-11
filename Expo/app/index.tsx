@@ -10,11 +10,7 @@ export default function Index() {
       <Link href="/Auth/AuthScreen" style={{ marginVertical: 10 }}>
         <Text style={{ color: "blue", fontSize: 18 }}>Go to Login Screen</Text>
       </Link>
-      <Link href="/populate/TestFirestore" style={{ marginVertical: 10 }}>
-        <Text style={{ color: "blue", fontSize: 18 }}>
-          Go to Populate Firestore
-        </Text>
-      </Link>
+      
     </View>
   );
 }

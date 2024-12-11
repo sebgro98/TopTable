@@ -16,6 +16,11 @@ export default function Dashboard() {
       <Link href="/Match/MatchingPage" style={{ marginVertical: 10 }}>
         <Text style={{ color: "blue", fontSize: 18 }}>Go to Matching Page</Text>
       </Link>
+      <Link href="/populate/TestFirestore" style={{ marginVertical: 10 }}>
+        <Text style={{ color: "blue", fontSize: 18 }}>
+          Go to Populate Firestore
+        </Text>
+      </Link>
     </View>
   );
 }
