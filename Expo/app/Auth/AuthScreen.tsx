@@ -23,7 +23,7 @@ export default function AuthScreen() {
       const userCredential = await signUp(email, password);
 
       if (userCredential?.user) {
-        router.push("/complete-profile");
+        router.push("/Auth/AuthScreen");
       }
     } catch (error: any) {
       Alert.alert("Sign Up Failed", error.message);

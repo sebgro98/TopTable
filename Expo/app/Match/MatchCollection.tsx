@@ -11,7 +11,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-const SWIPE_THRESHOLD = 0.25 * 300;
+const SWIPE_THRESHOLD = 0.25 * 300; // Adjust to fit your card width
 
 export default function MatchCollection({
   matches,
@@ -53,7 +53,7 @@ export default function MatchCollection({
     transform: [
       { translateX: translateX.value },
       { translateY: translateY.value },
-      { rotate: `${(translateX.value / 300) * 15}deg` },
+      { rotate: `${(translateX.value / 300) * 15}deg` }, // Adjust rotation scale
     ],
   }));
 
