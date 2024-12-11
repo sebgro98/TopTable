@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import User from "@/interfaces/User";
 import Group from "@/interfaces/Group";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import MatchFrame from "./MatchFrame";
 import Animated, {
@@ -13,32 +13,32 @@ import Animated, {
 
 const SWIPE_THRESHOLD = 0.25 * 300; // Adjust to fit your card width
 
-export default function MatchCollection({ matches }: { matches: User[] | Group[] }) {
+export default function MatchCollection({
+  matches,
+}: {
+  matches: User[] | Group[];
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [matches]); //When switching between users and groups
+
+  let validIndex = Math.min(currentIndex, matches.length - 1);
 
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
   const handleSwipeComplete = (direction: "left" | "right") => {
-    const newIndex =
-      direction === "left"
-        ? currentIndex + 1
-        : currentIndex - 1;
+    const newIndex = direction === "left" ? currentIndex + 1 : currentIndex - 1;
 
     if (newIndex >= 0 && newIndex < matches.length) {
       setCurrentIndex(newIndex);
+      validIndex = newIndex;
     }
 
     translateX.value = withTiming(0, { duration: 300 });
     translateY.value = withTiming(0, { duration: 300 });
-  };
-
-  const addToWishlist = () => {
-    console.log("Adding user/group to wishlist: ", matches[currentIndex].name);
-  };
-
-  const rejectMatch = () => {
-    console.log("Rejecting user/group: ", matches[currentIndex].name);
   };
 
   const gestureHandler = Gesture.Pan()
@@ -70,11 +70,10 @@ export default function MatchCollection({ matches }: { matches: User[] | Group[]
         <>
           <GestureDetector gesture={gestureHandler}>
             <Animated.View style={animatedStyle}>
-              <MatchFrame match={matches[currentIndex]} />
+              <MatchFrame match={matches[validIndex]} />
             </Animated.View>
           </GestureDetector>
-          <View style={styles.buttonContainer}>
-          </View>
+          <View style={styles.buttonContainer}></View>
         </>
       )}
     </View>
